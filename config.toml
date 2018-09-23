@@ -7,6 +7,11 @@ theme = "hugo-theme-learn"
 
 googleAnalytics = "UA-100787245-1"
 
+[social]
+discord = "https://discord.gg/Kduh53S"
+twitter = "https://twitter.com/zapicinc"
+github = "https://github.com/zapicinc"
+
 ######################
 # Learn theme options
 ######################
