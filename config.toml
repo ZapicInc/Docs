@@ -5,6 +5,8 @@ title = "Zapic Documentation"
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
 
+googleAnalytics = "UA-100787245-1"
+
 ######################
 # Learn theme options
 ######################
