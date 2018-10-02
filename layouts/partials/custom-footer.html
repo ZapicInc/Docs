@@ -1,4 +1,9 @@
+<!-- Only included if not running from `hugo serve` -->
+{{- if not .Site.IsServer -}}
+
+<!-- Google Analytics -->
 {{ template "_internal/google_analytics_async.html" . }}
+<!-- End Google Analytics -->
 
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/3439676.js"></script>
@@ -7,7 +12,7 @@
 <!-- Start of Mautic tracking -->
 <script>
     (function (w, d, t, u, n, a, m) {
-    w['MauticTrackingObject'] = n;
+        w['MauticTrackingObject'] = n;
         w[n] = w[n] || function () { (w[n].q = w[n].q || []).push(arguments) }, a = d.createElement(t),
             m = d.getElementsByTagName(t)[0]; a.async = 1; a.src = u; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://marketing.zapic.com/mtc.js', 'mt');
@@ -15,3 +20,5 @@
     mt('send', 'pageview');
 </script>
 <!-- End of Mautic tracking -->
+
+{{- end -}}
