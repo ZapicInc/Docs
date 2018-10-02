@@ -113,3 +113,23 @@ public class ExampleStartup : MonoBehaviour
         Zapic.Start();
     }
 ```
+
+## Permissions
+
+Zapic requires a handful of common permissions to function properly, these include camera access in order to allow players to customize their Zapic profile. These permissions are automatically handled for you via the SDK.
+
+### iOS
+
+All the required permissions are automatically added for you as part of a "PostBuildProcess" that is run when Unity exports the XCode project. If you wish to update the permission request text you can update the exported `.plist` file.
+
+### Android
+
+By default Unity will automatically prompt the user for all permissions that the app uses when the game launches for the first time. Zapic supports runtime permissions, meaning that the user will be asked to grant the permission when a feature required elevated rights is accessed. You can enable runtime permissions by updating your Manifest. For more info check out the Unity docs for [Runtime permissions in Android 6.0 (Marshmallow)](https://docs.unity3d.com/Manual/android-manifest.html)
+
+```
+<meta-data android:name="unityplayer.SkipPermissionsDialog" android:value="true" />
+```
+
+{{% notice warning %}}
+Adding this completely suppresses the permission dialog shown on startup, but you must handle runtime permissions carefully to avoid crashes. Zapic fully supports this, but it may cause issues if you use other SDKs or tools that dont support runtime permissions.
+{{% /notice %}}
