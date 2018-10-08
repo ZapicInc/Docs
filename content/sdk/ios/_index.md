@@ -238,14 +238,10 @@ or
 
 Please check specific integration guides for details on using `handleInteraction`.
 
-## Logging
+## Common Issues
 
-The Zapic iOS SDK includes a basic logging utility, `ZLog`, for internal purposes. The log is disabled by default, but it can be enabled for debugging and troubleshooting purposes. For example:
+### Enable Modules
 
-```swift
-// Enable debug logs
-ZLog.isEnabled = true
+Zapic uses objective c modules to automatically add references to core frameworks. If you encounter issues with Frameworks not being found or imports failing, please check that modules are enabled.
 
-// Disable debug logs (the default state)
-ZLog.isEnabled = false
-```
+![Example Zapic Menu Button](/img/ios-modules-setting.png)

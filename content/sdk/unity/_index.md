@@ -114,15 +114,21 @@ public class ExampleStartup : MonoBehaviour
     }
 ```
 
-## Permissions
+## iOS
 
-Zapic requires a handful of common permissions to function properly, these include camera access in order to allow players to customize their Zapic profile. These permissions are automatically handled for you via the SDK.
+### Permissions
 
-### iOS
+Zapic requires a handful of common permissions to function properly, these include camera access in order to allow players to customize their Zapic profile. These permissions are automatically handled for you via the SDK. All the required permissions are automatically added for you as part of a "PostBuildProcess" that is run when Unity exports the XCode project. If you wish to update the permission request text you can update the exported `.plist` file.
 
-All the required permissions are automatically added for you as part of a "PostBuildProcess" that is run when Unity exports the XCode project. If you wish to update the permission request text you can update the exported `.plist` file.
+### Enable Modules
 
-### Android
+Zapic uses objective c modules to automatically add references to core frameworks. The "PostBuildProcess" should automatically enable modules for your project. If you encounter issues with Frameworks not being found, please check that modules are enabled.
+
+![Example Zapic Menu Button](/img/ios-modules-setting.png)
+
+## Android
+
+### Runtime Permissions
 
 By default Unity will automatically prompt the user for all permissions that the app uses when the game launches for the first time. Zapic supports runtime permissions, meaning that the user will be asked to grant the permission when a feature required elevated rights is accessed. You can enable runtime permissions by updating your Manifest. For more info check out the Unity docs for [Runtime permissions in Android 6.0 (Marshmallow)](https://docs.unity3d.com/Manual/android-manifest.html)
 
