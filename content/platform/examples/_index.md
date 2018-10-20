@@ -1,5 +1,6 @@
 ---
 title: Examples
+weight: 100
 ---
 
 Here are some example [events]({{< ref "platform/events" >}}) and [challenges]({{< ref "platform/challenges" >}}) that should help you determine what to do in your game. These are intended to be representative only.
