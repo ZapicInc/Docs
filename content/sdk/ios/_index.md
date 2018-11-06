@@ -11,6 +11,10 @@ The Zapic iOS SDK is provided as a Swift framework. It can be used in both Swift
 Zapic requires iOS 9.0 or newer. Please ensure your iOS target is properly set for your project.
 {{% /notice %}}
 
+{{% notice warning %}}
+The 2.0.0 release of Zapic now requires you to configure your [IDFA settings]({{< ref "#idfa" >}}) when submitting your app to the App Store. Please ensure your settings are correct to ensure your app is not rejected.
+{{% /notice %}}
+
 ### Install using CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
@@ -27,7 +31,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'Zapic', '~> 1.3.0'
+    pod 'Zapic', '~> 2.0.0'
 end
 ```
 
@@ -237,6 +241,17 @@ or
 ```
 
 Please check specific integration guides for details on using `handleInteraction`.
+
+## IDFA
+
+IDFA is the abbreviation for identifier for advertisers on iOS. The IDFA allows Zapic to track a user when they click on an advertisement or promotion in order to attribute that install back to your app or game. Users may opt out if IDFA tracking via their iOS settings.
+
+After integrating the Zapic SDK, you need to let Apple know that you use the IDFA. To follow proper protocol when submitting your next release to the App Store, you should:
+
+1. Answer `Yes` to the question **Does this app use the Advertising Identifier (IDFA)?**
+2. Check the two boxes for:
+   1. **Attribute this app installation to a previously served advertisement**
+   2. **Attribute an action taken within this app to a previously served advertisement**
 
 ## Common Issues
 
