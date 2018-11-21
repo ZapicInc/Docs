@@ -24,3 +24,5 @@ When you add the "Z" button to your main menu, you will need to show the Zapic h
 - **Login** - If the player has not yet logged into Zapic, this will open up to a login/registration page, when the player completes the login process the Zapic UI will automatically close taking the player back to your game. This is a great way to encourage players to sign in before they can access a specific feature or game mode such as head to head multiplayer.
 
 - **Current** - This will open Zapic to the last page that the user was on before going back to your game.
+
+- **Promotion** - Check out the [promotions]({{< ref "platform/promotions" >}}) for more details.

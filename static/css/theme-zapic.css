@@ -52,6 +52,7 @@ h3,
 h4,
 h5 {
   color: var(--MAIN-TITLES-TEXT-color) !important;
+  clear: both;
 }
 
 a {
