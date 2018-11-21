@@ -126,6 +126,17 @@ Zapic uses objective c modules to automatically add references to core framework
 
 ![Example Zapic Menu Button](/img/ios-modules-setting.png)
 
+### IDFA
+
+IDFA is the abbreviation for identifier for advertisers on iOS. The IDFA allows Zapic to track a user when they click on an advertisement or promotion in order to attribute that install back to your app or game. Users may opt out if IDFA tracking via their iOS settings.
+
+After integrating the Zapic SDK, you need to let Apple know that you use the IDFA. To follow proper protocol when submitting your next release to the App Store, you should:
+
+1. Answer `Yes` to the question **Does this app use the Advertising Identifier (IDFA)?**
+2. Check the two boxes for:
+   1. **Attribute this app installation to a previously served advertisement**
+   2. **Attribute an action taken within this app to a previously served advertisement**
+
 ## Android
 
 ### Runtime Permissions
