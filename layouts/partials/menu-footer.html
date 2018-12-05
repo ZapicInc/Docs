@@ -1,5 +1,10 @@
 <center>
-    <a class="social-button" href="{{ .Site.Social.discord }}"><i class="fab fa-discord fa-2x"></i></a>
-    <a class="social-button" href="{{ .Site.Social.twitter }}"><i class="fab fa-twitter fa-2x"></i></a>
-    <a class="social-button" href="{{ .Site.Social.github }}"><i class="fab fa-github fa-2x"></i></a>
+  <a href="{{ $.Site.Params.Signup.link }}"
+    ><button class="cta-button z-anim-gradient">{{ .Site.Params.Signup.text }}</button></a
+  >
+</center>
+<center>
+  <a class="social-button" href="{{ .Site.Social.discord }}"><i class="fab fa-discord fa-2x"></i></a>
+  <a class="social-button" href="{{ .Site.Social.twitter }}"><i class="fab fa-twitter fa-2x"></i></a>
+  <a class="social-button" href="{{ .Site.Social.github }}"><i class="fab fa-github fa-2x"></i></a>
 </center>
