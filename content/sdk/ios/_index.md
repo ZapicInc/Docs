@@ -1,6 +1,7 @@
 ---
 title: iOS
 weight: 20
+defaultcodetab: Swift
 ---
 
 ## Installing the SDK
@@ -96,6 +97,9 @@ It is important to initialize Zapic as early as possible in your game's startup 
 
 Initializing Zapic is as simple as importing the framework and calling the `start` method from within the `AppDelegate` application methods. For example:
 
+{{% tabs %}}
+{{% tab "Swift" %}}
+
 ```swift
 import Zapic
 
@@ -105,6 +109,21 @@ func application(_ application: UIApplication, didFinishLaunching...) -> Bool {
 }
 ```
 
+{{% /tab %}}
+{{% tab "Objective-C" %}}
+
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+  [Zapic start];
+
+  return YES;
+}
+```
+
+{{% /tab %}}
+{{% /tabs %}}
+
 ## Player Management
 
 Player authentication and identity management are a critical component to many games, allowing players to play on multiple devices or participate in a multiplayer match. Zapic automatically manages player accounts and exposes player information so it can be used from within the game. For more details review the detailed [player information]({{< ref "platform/players" >}})
@@ -112,6 +131,9 @@ Player authentication and identity management are a critical component to many g
 ### Handling Players
 
 When a player successfully with Zapic, your game will be notified with the newly logged in player information. In order to receive the player notifications you must set the `onLoginHandler` and `onLogoutHandler`. These handlers should be set before calling `start` to ensure all player notifications are handled by your game.
+
+{{% tabs %}}
+{{% tab "Swift" %}}
 
 ```swift
 //AppDelegate.swift
@@ -136,7 +158,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 ```
 
-or
+{{% /tab %}}
+{{% tab "Objective-C" %}}
 
 ```objc
 //AppDelegate.m
@@ -162,11 +185,17 @@ or
 @end
 ```
 
+{{% /tab %}}
+{{% /tabs %}}
+
 ## Showing Pages
 
 The Zapic iOS SDK allows you to show all of the required UI components. You only need to include buttons in your own game menus to launch the desired Zapic page.
 
 Showing Zapic is as simple as calling `showDefaultPage` or `showPage` with the desired page name. The usual place to launch a Zapic page is from within the action selector of a button. For example:
+
+{{% tabs %}}
+{{% tab "Swift" %}}
 
 ```swift
 import Zapic
@@ -180,7 +209,8 @@ func showZapicDefaultAction(sender: UIButton!) {
 }
 ```
 
-or
+{{% /tab %}}
+{{% tab "Objective-C" %}}
 
 ```objc
 @import Zapic;
@@ -194,6 +224,9 @@ or
 }
 ```
 
+{{% /tab %}}
+{{% /tabs %}}
+
 The default page is the main page within Zapic that gives players access to all the included features. You must include a button on your primary game menu that shows the default page as described in the [branding guidelines](https://www.zapic.com/brand). You may include additional buttons that jump directly to other pages from anywhere in your game (e.g. challenges or stats).
 
 ## Submitting Events
@@ -202,19 +235,26 @@ Zapic uses a system of [events]({{< ref "platform/events" >}}) to track everythi
 
 Submitting Zapic events is as simple as calling the `submitEvent` method with a collection of key value pairs, each representing a single parameter. The best time to submit Zapic events is as soon as the desired trigger within your game occurs. Events can have 1 to n parameters, here is an example of sending events:
 
+{{% tabs %}}
+{{% tab "Swift" %}}
+
 ```swift
 import Zapic
 
 Zapic.submitEvent(["Distance": 147,"Score":22])
 ```
 
-or
+{{% /tab %}}
+{{% tab "Objective-C" %}}
 
 ```objc
 @import Zapic;
 
 [Zapic submitEvent:@{ @"Distance": @147,@"Score":@22}];
 ```
+
+{{% /tab %}}
+{{% /tabs %}}
 
 Be sure to review the [Events]({{< ref "platform/events" >}}) guide for the complete details on this powerful system.
 
@@ -226,19 +266,26 @@ In some of these cases Zapic will attach special meta data that allows Zapic to 
 
 It is the responsibility of the developer to pass this meta data from the 3rd party to Zapic so it can be processed by the Zapic SDK. The `handleInteraction` method should be called with the required meta data so Zapic can automatically respond to the player's actions.
 
+{{% tabs %}}
+{{% tab "Swift" %}}
+
 ```swift
 import Zapic
 
 Zapic.handleInteraction({data})
 ```
 
-or
+{{% /tab %}}
+{{% tab "Objective-C" %}}
 
 ```objc
 @import Zapic;
 
- [Zapic handleInteraction:{data}];
+[Zapic handleInteraction:{data}];
 ```
+
+{{% /tab %}}
+{{% /tabs %}}
 
 Please check specific integration guides for details on using `handleInteraction`.
 
