@@ -10,11 +10,11 @@ Zapic is the first cross platform & cross application gaming community designed 
 
 - **Promote Your Game** - Leverage social connections to promote you game to new players, automatically. Players can invite their friends to play your game and compete in a challenge.
 
-- **Engage Your Players** - Players that play with friends have higher levels of engagement and will spend more time playing your game. Zapic allows any game become a social experience.
+- **Engage Your Players** - Players that play with friends have higher levels of engagement and will spend more time playing your game. Zapic allows any game to become a social experience.
 
-- **Cross Platform** - Don't artifically split your player base in half, allow people to play with their friends regardless of the device. It's the right thing to do.
+- **Cross Platform** - Don't artificially split your player base in half. Allow people to play with their friends regardless of the device. It's the right thing to do.
 
-- **Easy to Integrate** - Most games can be integrated in less than 10 lines of code, really! We host all the backend services and serve all UIs in an embedded webview, allowing you focus on building a great game while we keep the servers buzzing.
+- **Easy to Integrate** - Most games can be integrated in less than 10 lines of code, really! We host all the backend services and serve all UIs in an embedded webview, allowing you to focus on building a great game while we keep the servers buzzing.
 
 - **Free to Use** - Best of all, Zapic is a free service that supports unlimited players and apps. We offer premium subscriptions for studios that require fully customized themes or higher levels of support.
 
